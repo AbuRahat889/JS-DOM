@@ -9,16 +9,19 @@
     <h1>This is comment area</h1>
 
     <div id="commment-post">
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur, eaque minus, quod modi dolorum magnam dolorem placeat perspiciatis cupiditate nemo velit accusamus sit unde ad animi, quaerat fugiat nesciunt quas nostrum? Cumque eligendi excepturi veniam asperiores rerum ducimus repellat ex natus vero delectus, obcaecati ullam amet facere fugit labore quasi soluta sequi? Aliquam, enim! Dignissimos distinctio at necessitatibus possimus sapiente praesentium. Accusamus, ratione hic incidunt odit itaque impedit ut laudantium suscipit veniam, esse similique exercitationem culpa nesciunt sapiente officiis dolorem.</p>
-        <p>Nisi unde rerum inventore tempora amet laudantium, explicabo aspernatur beatae dicta commodi delectus pariatur aut asperiores odit porro quibusdam eum quidem obcaecati dignissimos corrupti repellat hic eius ab. Nemo repudiandae reiciendis ipsam iure qui eos dolor, nisi omnis sed ducimus earum eaque itaque fugit rerum numquam veritatis nulla quod sunt laboriosam. Dolore, reiciendis! Aliquid facere voluptatem quaerat, repellat laboriosam accusamus perferendis reprehenderit laudantium ducimus natus commodi exercitationem eveniet! Asperiores cupiditate quas quos debitis voluptatem delectus consequatur nisi autem vero hic.</p>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur, eaque minus, quod modi dolorum magnam dolorem placeat perspiciatis cupiditate nemo velit accusamus sit unde ad animi, quaerat fugiat nesciunt quas nostrum?.</p>
+
+        <p>Nisi unde rerum inventore tempora amet laudantium, explicabo aspernatur beatae dicta commodi delectus pariatur aut asperiores odit porro quibusdam eum quidem obcaecati dignissimos corrupti repellat hic eius ab. Nemo repudiandae reiciendis ipsam iure qui eos dolor, .</p>
         
     </div>
 
     <div>
-        <textarea id="comment-box"  name="textarea" cols="50" rows="7"></textarea>
+        <textarea id="comment-box"  name="textarea" placeholder="your comment" cols="50" rows="7"></textarea>
+        <br>
+        <button id="comment-btn">comment</button>
     </div>
 
-    <button id="comment-btn">comment</button>
+    
 
     <script>
 
@@ -30,7 +33,7 @@
             p.innerText = commentBox;
             commmentPost.appendChild(p);
 
-            commentBox.value= '';
+            document.getElementById('comment-box').value = '';
         })
     </script>
 </body>

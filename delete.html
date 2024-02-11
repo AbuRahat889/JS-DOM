@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Button </title>
+</head>
+<body>
+    <h1>This is use case delete button </h1>
+    <br>
+    <h2 id="delete-text">Delete this text</h2>
+    <input id="input-text" type="text" name="text" placeholder="type delete">
+    <button id="delete-btn" disabled>delete</button>
+
+
+    <script>
+        
+        //disabled and enable button
+        document.getElementById('input-text').addEventListener('keyup', function confirmDelete(){
+            let inputValue = event.target.value; 
+            let deleteButton = document.getElementById('delete-btn');
+            if(inputValue === 'delete'){
+                deleteButton.removeAttribute('disabled')
+            }
+            else{
+                deleteButton.setAttribute('disabled',true);
+            }          
+        })
+
+        //clicked button 
+        document.getElementById('delete-btn').addEventListener('click', function(){
+            let deleteText = document.getElementById('delete-text');
+            deleteText.style.display = 'none';
+
+            document.getElementById('input-text').value = '';         
+        })
+    </script>
+</body>
+</html>
